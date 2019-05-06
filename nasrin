@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/jsaccordion.css" rel="stylesheet">
+	<script src="./js/jsaccordion.js"></script>
+</head>
+<body>
+	<div id="test1">new object by selector then test it</div>
+	<div id="test2">new object by dom element then test</div>
+	<div id="test3">direct call by selector then test immediately</div>
+	<div id="test4">direct call and did not keep result then test immediately</div>
+		<p>
+			new object by selector then test it
+			new object by selector then test it
+			new object by selector then test it
+			new object by selector then test it
+		</p>
+	<div id="test5">new object by selector then test it</div>
+	<div id="test6">new object by dom element then test</div>
+	<div id="test7">direct call by selector then test immediately</div>
+	<div id="test8">direct call and did not keep result then test immediately</div>
+</body>
+</html>
