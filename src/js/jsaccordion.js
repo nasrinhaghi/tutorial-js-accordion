@@ -6,7 +6,12 @@ function JSAccordion(elementOrSelector) {
         return new JSAccordion(elementOrSelector);
 
     //  define public methods
-    this.init = function() {
+    this.init=function () {
+        var divClass = this.targetElement.querySelector("div[id ^= 'container']");
+        divClass.classList.add('jsac-container');
+
+        var ulElement=this.targetElement.querySelector("div>ul");
+        ulElement.classList.add('jsac-list');
     };
 
     //  start construction operations
@@ -31,5 +36,26 @@ function JSAccordion(elementOrSelector) {
     return this;
 }
 
+function nicePrint() {
+    for (var i in arguments) {
+        var temp = arguments[i];
+        if (typeof temp == "object") {
+            document.write("{ ")
+            for (var j in temp) {
+                document.write(j + ":" + temp[j]);
+                if (j != temp.length - 1) {
+                    document.write(" , ");
+                }
+            }
+            document.write(" }")
+        } else {
+            document.write(temp + " &nbsp; &nbsp; ");
+        }
+    }
+    document.write("<br>");
+}
+
+
 //  define static property to keep all instances
 JSAccordion.instances = [];
+

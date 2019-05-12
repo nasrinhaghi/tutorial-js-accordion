@@ -2,13 +2,25 @@
 <html>
 <head>
     <link href="css/jsaccordion.css" rel="stylesheet">
-    <script src="./js/jsaccordion.js"></script>
+    <script src="js/jsaccordion.js"></script>
+<style>
+
+   div[id ^= "container"]{
+        padding: 10px;
+        background: #ccc;
+    }
+
+   div>ul{
+       list-style-type: circle;
+   }
+</style>
+
+
 </head>
-<body>
-<div>new object by selector then test it</div>
-<div>
+<body class="body">
+<div id="container_top">
     <ul>
-        <li>
+        <li class="collapsed">
             <div>
                 <span></span>
                 <h3>section #1 title</h3>
@@ -42,12 +54,15 @@
         </li>
     </ul>
 </div>
-<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The
-    passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of
-    Cicero's De Finibus Bonorum et Malorum for use in a type specimen book</p>
-<div>
+<p>Lorem ipsum, or lipsum as it is sometimes known,
+    is dummy text used in laying out print, graphic or web designs.
+    The passage is attributed to an unknown typesetter in the 15th century
+    who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
+</p>
+
+<div id="container_btn">
     <ul>
-        <li>
+        <li class="collapsed">
             <div>
                 <span></span>
                 <h3>section #1 title</h3>
@@ -81,5 +96,12 @@
         </li>
     </ul>
 </div>
+
+<script>
+    var accordions = new JSAccordion(".body");
+    accordions.init();
+</script>
+
 </body>
+
 </html>
