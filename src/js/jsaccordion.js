@@ -10,8 +10,8 @@ function JSAccordion(elementOrSelector) {
         var divClass = this.targetElement.querySelector("div[id ^= 'container']");
         divClass.classList.add('jsac-container');
 
-        var ulElement=this.targetElement.querySelector("div>ul");
-        ulElement.classList.add('jsac-list');
+        var ulClass=this.targetElement.querySelector("div>ul");
+        ulClass.classList.add('jsac-list');
     };
 
     //  start construction operations
