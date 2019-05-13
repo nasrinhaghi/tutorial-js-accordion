@@ -13,12 +13,14 @@
    div>ul{
        list-style-type: circle;
    }
+
+
 </style>
 
 
 </head>
 <body class="body">
-<div id="container_top">
+<div>
     <ul>
         <li class="collapsed">
             <div>
@@ -60,7 +62,7 @@
     who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
 </p>
 
-<div id="container_btn">
+<div>
     <ul>
         <li class="collapsed">
             <div>
@@ -98,8 +100,10 @@
 </div>
 
 <script>
-    var accordions = new JSAccordion(".body");
-    accordions.init();
+    var accordions1 = new JSAccordion(".body");
+    accordions1.init();
+/*    var accordions2 =new JSAccordion("#container_btn");
+    accordions2.init()*/
 </script>
 
 </body>

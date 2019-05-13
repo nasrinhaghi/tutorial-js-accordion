@@ -7,11 +7,33 @@ function JSAccordion(elementOrSelector) {
 
     //  define public methods
     this.init=function () {
-        var divClass = this.targetElement.querySelector("div[id ^= 'container']");
+        var divClass = document.querySelector("body>div");
         divClass.classList.add('jsac-container');
 
-        var ulClass=this.targetElement.querySelector("div>ul");
+        var ulClass = document.querySelector("div>ul");
         ulClass.classList.add('jsac-list');
+
+        var liClass = ulClass.querySelectorAll('li');
+        liClass.forEach(function (element) {
+            var headerClass=element.querySelector("div:nth-child(1)");
+            var spanClass=headerClass.querySelector('span');
+            var bodyClass=element.querySelector("div:nth-child(2)");
+
+            element.classList.add('jsac-list');
+            headerClass.classList.add('jsac-header');
+            spanClass.classList.add('jsac-status-icon');
+            bodyClass.classList.add('jsac-body');
+
+            function replaceFunc() {
+                element.setAttribute('class', element.className.replace('expanded','collapsed'));
+                element.setAttribute('class', element.className.replace('collapsed','expanded'));
+            }
+
+            headerClass.addEventListener('click', replaceFunc , false);
+
+        });
+
+
     };
 
     //  start construction operations
