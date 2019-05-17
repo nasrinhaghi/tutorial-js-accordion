@@ -7,10 +7,8 @@ function JSAccordion(elementOrSelector) {
 
     //  define public methods
     this.init=function () {
-        var divClass = document.querySelector("body>div");
-        divClass.classList.add('jsac-container');
-
-        var ulClass = document.querySelector("div>ul");
+        this.targetElement.classList.add('jsac-container');
+        var ulClass=this.targetElement.querySelector("ul");
         ulClass.classList.add('jsac-list');
 
         var liClass = ulClass.querySelectorAll('li');

@@ -1,0 +1,44 @@
+body{
+    background-color: #eee;
+}
+
+div[id ^= "container"] , .panel {
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+}
+
+p{
+    padding: 5px;
+}
+
+div>ul{
+    list-style-type: none;
+}
+
+.jsac-header h3{
+    width: 30%;
+    background-color: cadetblue;
+    padding: 5px 5px 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.jsac-body{
+    width: 30%;
+    margin-bottom: 5px;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: 5px 5px 5px 10px;
+    overflow: hidden;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
+}
